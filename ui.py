@@ -9,7 +9,7 @@ class View(QWidget):
         self.initUI()
 
     def initUI(self):
-        self.btn1=QPushButton('Message',self) # 버튼추가
+        self.btn1=QPushButton('Calc',self) # 버튼추가
         self.btn2=QPushButton('Clear',self) # 버튼2 추가
 
         self.te1=QPlainTextEdit()
@@ -17,6 +17,8 @@ class View(QWidget):
 
         self.le1=QLineEdit('0',self)
         self.le1.setAlignment(QtCore.Qt.AlignRight)
+        self.le1.setFocus(True)
+        self.le1.selectAll()
 
         self.le2=QLineEdit('0',self)
         self.le2.setAlignment(QtCore.Qt.AlignRight)
@@ -46,8 +48,14 @@ class View(QWidget):
         self.resize(256, 256)
         self.show()
 
+<<<<<<< HEAD
     def activateMessage(self,text):
         self.te1.appendPlainText(text)
+=======
+    def setDisplay(self):
+        # QMessageBox.information(self,"informatino","Button clicked!")
+        self.te1.appendPlainText("Button clicked!")
+>>>>>>> ea7685215ab9b6a0660216b4d0018b23065f4152
 
     def clearMessage(self):
         # QMessageBox.information(self,"informatino","Button clicked!")
