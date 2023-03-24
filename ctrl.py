@@ -41,4 +41,7 @@ class Control:
         return a/b
     
     def pow(sefl,a,b):
-        return pow(a,b)
+        if (a==0):
+            return 0
+        else:
+            return pow(a,b)
