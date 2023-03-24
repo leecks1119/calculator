@@ -31,7 +31,10 @@ class Control:
         return a*b
     
     def div(sefl,a,b):
-        return a/b
+        if (b==0):
+            return 0
+        else:
+            return a/b
     
     def pow(sefl,a,b):
         return pow(a,b)
